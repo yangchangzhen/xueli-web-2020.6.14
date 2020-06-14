@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		.clear:after {
+			content: "";
+			display: block;
+			height: 0px;
+			clear: both;
+		}
+		#head {
+			display: block;
+			height: 64px;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.5);
+			position: fixed;
+			top: 0px;
+			z-index:999;   
+		}
+		#logo {
+			display: inline-block;
+			float: left;
+			background: url('images/logo.png') no-repeat center;   
+			height: 64px;
+			width: 250px;
+			position: absolute;
+		}
+		#nav {
+			display: inline-block;
+			float: left;
+			height: 64px;
+			position: absolute;
+			left: 17%;
+		}
+		#nav>ul {
+			display: inline-block;
+			float: left;
+		}
+		#nav>ul>li {
+			display: inline-block;
+			float: left;
+			list-style: none;
+			height: 64px;
+			width: 120px;
+			line-height: 64px;
+			text-align: center;
+		}
+		#nav>ul>li>a {
+			text-decoration: none;
+			font-size: 18px;
+			color: black;
+		}
+		#nav>ul>li:hover a {
+			color: white;
+		}
+		#n1:hover {
+			background-color: #B8C4B6;
+		}
+		#n2:hover {
+			background-color: #E0D4D8;
+		}
+		#n3:hover {
+			background-color: #8993AC;
+		}
+		#n4:hover {
+			background-color: #A47D80;
+		}
+		
+
+
+		#banner {
+			background: url('images/banner.JPG') no-repeat center;
+			height: 561px;   
+			background-size: 100%;   
+			position: relative;
+		}
+		#search {
+			display: inline-block;
+			float: left;
+			width:624px;
+			height:30px;
+			padding: 13px 19px 12px 19px;
+			border: 1px #00A4FF solid;
+			font-size:20px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(137,148,167,1);
+			line-height:31px;
+			position: absolute;
+			left: 150px;
+			top: 315px;
+			border-radius: 3px;
+		}
+		#submit2 {
+			display: inline-block;
+			float: left;
+			width:56px;
+			height:56px;
+			background: rgba(249,234,219,1) url('images/fa-search.png') no-repeat center center;
+			border: none;
+			position: absolute;
+			left: 814px;
+			top: 315px;
+			border-radius: 3px;
+		}
+		#nav2 {
+			display: inline-block;
+			width: 600px;
+			height: 25px;
+			line-height: 25px;
+			position: absolute;
+			left: 155px;
+			top: 370px;
+			
+		}
+		#nav2>p {
+			display: inline-block;
+			font-size: 16px;
+			color: white;
+
+		}
+		#nav2>a {
+			text-decoration: none;
+			font-size: 16px;
+			color: white;
+		}
+		#nav2>a:hover {
+			font-weight: bold;
+			color: black;
+		}
+		
+		#banner>p {
+			color: white;
+			font-size: 80px;
+			font-family: Times New Roman;
+		}
+		#p1 {
+			position: absolute;
+			left: 140px;
+			top: 155px;
+		}
+		#p2 {
+			position: absolute;
+			left: 145px;
+			top: 225px;
+		}
+		#next1 {
+			display: inline-block;
+			float: left;
+			height: 561px;   
+			width: 70px;
+			background-color: rgba(1, 1, 1, 0.5);
+			font-size: 80px;
+			line-height: 550px;
+			color: rgba(249,249,249,0.4);
+		}
+		#next2 {
+			display: inline-block;
+			float: right;
+			height: 561px;   
+			width: 70px;
+			background-color: rgba(1, 1, 1, 0.4);
+			font-size: 80px;
+			line-height: 550px;
+			color: rgba(249,249,249,0.4);
+		}
+		#teli2 {
+			display: inline-block;
+			margin-left: 10px;
+		}
+		#center1 {
+			height: 1200px;
+			background-size: 100%;
+			background-color: #7E8C86;
+			position: relative;
+		}
+		#box {
+			width: 1514px;
+			height: 1170px;
+			margin: 0 auto;
+			position: relative;
+		}
+		#teli3 {
+			font-size: 59px;
+			color: rgba(249,249,249,0.4);
+			height: 50px;
+			line-height: 50px;
+			background-size: 100%;
+			padding-left: 10px;
+			padding-top: 23px;
+			font-family: Times New Roman;
+		}
+		#part1 {
+			font-size: 38px;
+			position: absolute;
+			left: 43px;
+			top: 54px;
+			font-family: 微软雅黑;
+			font-weight: bold;
+		}
+		#card1 {
+			height: 320px;
+			width: 240px;
+			position: absolute;
+			left: 43px;
+			top: 160px;
+			text-align: center;
+			background-color: #DFCCCE;
+			padding-top: 12px;
+			color: white;
+			font-size: 24px;
+			font-family: Times New Roman;
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+		}
+		
+		#ziliao {
+			display: inline-block;
+			height: 96px;
+			width: 220px;
+			float: left;
+			position: absolute;
+			left: 10px;
+			top: 232px;
+		}
+		#ziliao>p {
+			display: inline-block;
+			float: left;
+		}
+		#name1 {
+			position: absolute;
+			top: 8px;
+			left: 34px;
+		}
+		#fans1 {
+			position: absolute;
+			top: 72px;
+			left: 18px;
+			font-size: 18px;
+			color: rgba(10, 10, 10, 0.4);
+		}
+		#title1 {
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			font-size: 18px;
+			color: #FAEADB;
+		}
+		#wall1 {
+			display: inline-block;
+			height: 430px;
+			width: 1183px;
+			position: absolute;
+			top: 110px;
+			left: 325px;
+			background-color: #DFCCCE;
+		}
+		#wall1>ul {
+			display: inline-block;
+			float: left;
+		}
+		#wall1>ul>li {
+			list-style: none;
+			display: inline-block;
+			float: left;
+		}
+		#liphoto1 {
+			width: 267px;
+			height: 410px;
+			margin: 10px;
+		}
+		#liphoto2 {
+			width: 300px;
+			height: 200px;
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		#liphoto3 {
+			width: 300px;
+			height: 200px;
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		#liphoto4 {
+			width: 300px;
+			height: 200px;
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		#liphoto5 {
+			width: 300px;
+			height: 200px;
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		#liphoto6 {
+			width: 267px;
+			height: 410px;
+			position: absolute;
+			left: 906px;
+			top: 10px;
+		}
+		#tips1 {	
+			width: 267px;
+			height: 410px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			background:rgba(1,1,1,0.5);
+			font-size: 22px;
+			font-family: KaiTi;
+			color: white;
+			display: none;
+		}
+		#liphoto1:hover #tips1 {
+			display: inline-block;
+		}
+		#word1{
+			position: absolute;
+			top: 118px;
+		}
+		#weibo{
+			position: absolute;
+			top: 230px;
+			left: 120px;
+		}
+		#tips2 {	
+			width: 267px;
+			height: 400px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background:rgba(1,1,1,0.5);
+			font-size: 22px;
+			font-family: KaiTi;
+			color: white;
+			display: none;
+		}
+		#liphoto6:hover #tips2 {
+			display: inline-block;
+		}
+		#word2{
+			position: absolute;
+			top: 118px;
+		}
+		#card2 {
+			height: 320px;
+			width: 240px;
+			position: absolute;
+			left: 43px;
+			top: 700px;
+			text-align: center;
+			background-color: #C3CBD8;
+			padding-top: 12px;
+			color: white;
+			font-size: 24px;
+			font-family: Times New Roman;
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+		}
+		#name2 {
+			position: absolute;
+			top: 5px;
+			left: 68px;
+		}
+		#wall2 {
+			display: inline-block;
+			height: 425px;
+			width: 1183px;
+			position: absolute;
+			top: 650px;
+			left: 325px;
+			background-color: #C3CBD8;
+		}
+		#wall2>ul {
+			display: inline-block;
+			float: left;
+		}
+		#wall2>ul>li {
+			list-style: none;
+			display: inline-block;
+			float: left;
+		}
+		#liphoto7 {
+			width: 296px;
+			height: 198px;
+			margin: 15px 0px 0px 15px;
+			background-color: black;
+		}
+		#liphoto8 {
+			width: 296px;
+			height: 198px;
+			margin: 15px 0px 0px 0px;
+		}
+		#liphoto9 {
+			width: 296px;
+			height: 198px;
+			margin: 15px 0px 0px 0px;
+			background-color: black;
+		}
+		#liphoto10 {
+			width: 296px;
+			height: 198px;
+			margin-left: 15px;
+		}
+		#liphoto11 {
+			width: 296px;
+			height: 198px;
+			background-color: black;
+		}
+		#liphoto12 {
+			width: 294px;
+			height: 196px;
+		}
+		#liphoto13 {
+			width: 264px;
+			height: 396px;
+			position: absolute;
+			left: 903px;
+			top: 15px;
+		}
+		#tips3 {
+			display: none;
+			height: 50px;
+			width: 250px;
+			font-size: 20px;
+			color: white;
+			position: absolute;
+			top: 60px;
+			left: 40px;
+		}
+		#liphoto10:hover #tips3 {
+			display: inline-block;
+		}
+		#tips4 {
+			display: none;
+			height: 50px;
+			width: 250px;
+			font-size: 20px;
+			color: white;
+			position: absolute;
+			top: 280px;
+			left: 340px;
+		}
+		#liphoto8:hover #tips4 {
+			display: inline-block;
+		}
+		#tips5 {
+			display: none;
+			height: 50px;
+			width: 250px;
+			font-size: 20px;
+			color: white;
+			position: absolute;
+			top: 60px;
+			left: 640px;
+		}
+		#liphoto12:hover #tips5 {
+			display: inline-block;
+		}
+		#center2 {
+			width: 1519px;
+			height: 4240px;
+			margin: 0 auto;
+			position: relative;
+			background-color: #ACAFB8;
+
+		}
+		body {
+			background-color: #ACAFB8;
+		}
+		#teli4 {
+			font-size: 59px;
+			color: rgba(30,30,30,0.4);
+			height: 50px;
+			line-height: 50px;
+			background-size: 100%;
+			position: absolute;
+			left: 10px;
+			top: 15px;
+			font-family: Times New Roman;
+		}
+		#part2 {
+			font-size: 38px;
+			position: absolute;
+			left: 25px;
+			top: 36px;
+			font-family: 微软雅黑;
+			font-weight: bold;
+		}
+		#box2 {
+			display: inline-block;
+			width: 1514px;
+			margin: 100px auto;
+		}
+		.photolist {
+			display: inline-block;
+			float: left;
+			width: 407px;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		#pl1 {
+			height: 543px;
+			margin-left: 85px;
+		}
+		#pl2 {
+			height: 234px;
+			margin-left: 60px;
+		}
+		#pl3 {
+			height: 306px;
+			margin-left: 60px;
+		}
+		#pl4 {
+			height: 306px;
+			margin-left: 60px;
+			margin-top: -10px;
+		}
+		#pl5 {
+			height: 415px;
+			margin-left: 60px;
+			margin-top: 60px;
+		}
+		#pl6 {
+			height: 246px;
+			margin-left: 85px;
+			margin-top: -175px;
+		}
+		#pl7 {
+			height: 545px;
+			margin-left: 60px;
+			margin-top: -115px;
+		}
+		#pl8 {
+			height: 415px;
+			margin-left: 60px;
+		}
+		#pl9 {
+			height: 271px;
+			margin-top: 55px;
+			margin-left: 60px;
+		}
+		#pl10 {
+			height: 272px;
+			margin-top: -615px;
+			margin-left: 85px;
+		}
+		#pl11 {
+			height: 271px;
+			margin-top: -290px;
+			margin-left: 85px;
+		}
+		#pl12 {
+			height: 271px;
+			margin-top: 35px;
+			margin-left: 85px;
+		}
+		#pl13 {
+			height: 271px;
+			margin-top: -255px;
+			margin-left: 60px;
+		}
+		#pl14 {
+			height: 271px;
+			margin-top: 60px;
+			margin-left: 60px;
+		}
+		#pl15 {
+			height: 271px;
+			margin-top: 30px;
+			margin-left: 85px;
+		}
+		#pl16 {
+			height: 271px;
+			margin-top: -255px;
+			margin-left: 60px;
+		}
+		#pl17 {
+			height: 271px;
+			margin-top: 55px;
+			margin-left: 60px;
+		}
+		#pl18 {
+			height: 542px;
+			margin-top: 35px;
+			margin-left: 85px;
+		}
+		#pl19 {
+			height: 271px;
+			margin-top: -255px;
+			margin-left: 60px;
+		}
+		#pl20 {
+			height: 407px;
+			margin-top: 60px;
+			margin-left: 60px;
+		}
+		#pl21 {
+			height: 542px;
+			margin-top: -390px;
+			margin-left: 60px;
+		}
+		#pl22 {
+			height: 542px;
+			margin-top: 60px;
+			margin-left: 60px;
+		}
+		#pl23 {
+			height: 306px;
+			margin-top: -430px;
+			margin-left: 85px;
+		}
+		#pl24 {
+			height: 800px;
+			margin-top: -60px;
+			margin-left: 85px;
+		}
+		#pl25 {
+			height: 543px;
+			margin-top: -390px;
+			margin-left: 60px;
+		}
+		#pl26 {
+			height: 286px;
+			margin-top: 60px;
+			margin-left: 60px;
+		}
+		#pl27 {
+			height: 523px;
+			margin-top: -130px;
+			margin-left: 60px;
+		}
+		#pl28 {
+			height: 332px;
+			margin-top: 60px;
+			margin-left: 60px;
+		}
+		#ending {
+			display: inline-block;
+			width: 1200px;
+			height: 100px;
+			line-height: 100px;
+			font-size: 50px;
+			font-weight: bold;
+			margin-left: 85px;
+			margin-top: 30px;
+		}
+		#bottom {
+			width: 100%px;
+			height: 427px;
+			margin: 0 auto;
+			background-color: #A47D80;
+		}
+		#litips1 {
+			display: none;
+			height: 543px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			
+		}
+		#litips1>P {
+			display: inline-block;
+			width: 377px;
+			height: 120px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 190px;
+			margin-left: 20px;
+		}
+		#litips1>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl1:hover #litips1 {
+			display: inline-block;
+		}
+		#litips2 {
+			display: none;
+			height: 234px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			
+		}
+		#litips2>P {
+			display: inline-block;
+			width: 400px;
+			height: 120px;
+			font-size: 29px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 80px;
+
+		}
+		#litips2>P>span {
+			float: right;
+			font-size: 24px;
+		}
+		#pl2:hover #litips2 {
+			display: inline-block;
+		}
+		#litips3 {
+			display: none;
+			height: 306px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 1019px;
+			
+		}
+		#litips3>P {
+			display: inline-block;
+			width: 370px;
+			height: 120px;
+			font-size: 29px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 90px;
+			margin-left: 20px;
+
+		}
+		#litips3>P>span {
+			float: right;
+			font-size: 24px;
+		}
+		#pl3:hover #litips3 {
+			display: inline-block;
+		}
+		#litips4 {
+			display: none;
+			height: 306px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 396px;
+			
+		}
+		#litips4>P {
+			display: inline-block;
+			width: 370px;
+			height: 120px;
+			font-size: 29px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 90px;
+			margin-left: 20px;
+
+		}
+		#litips4>P>span {
+			float: right;
+			font-size: 24px;
+		}
+		#pl4:hover #litips4 {
+			display: inline-block;
+		}
+		#litips6 {
+			display: none;
+			height: 246px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			top: 706px;
+			
+		}
+		#litips6>P {
+			display: inline-block;
+			width: 350px;
+			height: 120px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 60px;
+			margin-left: 30px;
+		}
+		#litips6>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl6:hover #litips6 {
+			display: inline-block;
+		}
+		#litips7 {
+			display: none;
+			height: 545px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 766px;
+			
+		}
+		#litips7>P {
+			display: inline-block;
+			width: 350px;
+			height: 120px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 190px;
+			margin-left: 30px;
+		}
+		#litips7>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl7:hover #litips7 {
+			display: inline-block;
+		}
+		#litips10 {
+			display: none;
+			height: 272px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			top: 1007px;
+			
+		}
+		#litips10>P {
+			display: inline-block;
+			width: 390px;
+			height: 160px;
+			font-size: 26px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 50px;
+			margin-left: 10px;
+		}
+		#litips10>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl10:hover #litips10 {
+			display: inline-block;
+		}
+		#litips11 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			top: 1332px;
+			
+		}
+		#litips11>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl11:hover #litips11 {
+			display: inline-block;
+		}
+		#litips13 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 1367px;
+			
+		}
+		#litips13>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl13:hover #litips13 {
+			display: inline-block;
+		}
+		#litips9 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 1019px;
+			top: 1351px;
+			
+		}
+		#litips9>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl9:hover #litips9 {
+			display: inline-block;
+		}
+		#litips12 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			top: 1657px;
+			
+		}
+		#litips12>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl12:hover #litips12 {
+			display: inline-block;
+		}
+		#litips16 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 1698px;
+			
+		}
+		#litips16>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl16:hover #litips16 {
+			display: inline-block;
+		}
+		#litips14 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 1019px;
+			top: 1682px;
+			
+		}
+		#litips14>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl14:hover #litips14 {
+			display: inline-block;
+		}
+		#litips15 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			top: 1983px;
+			
+		}
+		#litips15>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl15:hover #litips15 {
+			display: inline-block;
+		}
+		#litips19 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 2024px;
+			
+		}
+		#litips19>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl19:hover #litips19 {
+			display: inline-block;
+		}
+		#litips17 {
+			display: none;
+			height: 271px;
+			line-height: 271px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 1019px;
+			top: 2008px;
+			
+		}
+		#litips17>P {
+			display: inline-block;
+			width: 390px;
+			height: 271px;
+			font-size: 185px;
+			font-family: KaiTi;
+			color: white;
+			margin-left: 10px;
+		}
+		#pl17:hover #litips17 {
+			display: inline-block;
+		}
+		#litips21 {
+			display: none;
+			height: 543px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 2356px;
+			
+		}
+		#litips21>P {
+			display: inline-block;
+			width: 395px;
+			height: 180px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 190px;
+			margin-left: 10px;
+		}
+		#litips21>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl21:hover #litips21 {
+			display: inline-block;
+		}
+		#litips25 {
+			display: none;
+			height: 543px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 2958px;
+			
+		}
+		#litips25>P {
+			display: inline-block;
+			width: 395px;
+			height: 180px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 190px;
+			margin-left: 10px;
+		}
+		#litips25>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl25:hover #litips25 {
+			display: inline-block;
+		}
+		#litips27 {
+			display: none;
+			height: 523px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 552px;
+			top: 3564px;
+			
+		}
+		#litips27>P {
+			display: inline-block;
+			width: 395px;
+			height: 180px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 200px;
+			margin-left: 10px;
+		}
+		#litips27>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl27:hover #litips27 {
+			display: inline-block;
+		}
+		#litips20 {
+			display: none;
+			height: 407px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 1019px;
+			top: 2339px;
+			
+		}
+		#litips20>P {
+			display: inline-block;
+			width: 395px;
+			height: 180px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 140px;
+			margin-left: 10px;
+		}
+		#litips20>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl20:hover #litips20 {
+			display: inline-block;
+		}
+		#litips23 {
+			display: none;
+			height: 306px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			top: 2918px;
+			
+		}
+		#litips23>P {
+			display: inline-block;
+			width: 360px;
+			height: 100px;
+			font-size: 25px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 125px;
+			margin-left: 30px;
+		}
+		#pl23:hover #litips23 {
+			display: inline-block;
+		}
+		#litips22 {
+			display: none;
+			height: 543px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 1019px;
+			top: 2806px;
+			
+		}
+		#litips22>P {
+			display: inline-block;
+			width: 395px;
+			height: 180px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 215px;
+			margin-left: 10px;
+		}
+		#litips22>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl22:hover #litips22 {
+			display: inline-block;
+		}
+		#litips18 {
+			display: none;
+			height: 542px;
+			width: 407px;
+			background-color: rgba( 1, 1, 1, 0.5);
+			position: absolute;
+			left: 85px;
+			top: 2314px;
+			
+		}
+		#litips18>P {
+			display: inline-block;
+			width: 360px;
+			height: 100px;
+			font-size: 30px;
+			font-family: KaiTi;
+			color: white;
+			margin-top: 175px;
+			margin-left: 25px;
+		}
+		#litips18>P>span {
+			float: right;
+			font-size: 25px;
+		}
+		#pl18:hover #litips18 {
+			display: inline-block;
+		}
+
+		#box3 {
+			display: inline-block;
+			width: 1200px;
+			height: 420px;
+			position: absolute;
+			left: 170px;
+
+		}
+		#slogan {
+			display: inline-block;
+			float: left;
+			width: 300px;
+			height: 130px;
+			line-height: 30px;
+			font-size: 16px;
+			margin-top: 80px;
+		}
+		#slogan>span {
+			font-weight: bold;
+			font-size: 35px;
+		}
+		#copyright {
+			display: inline-block;
+			float: left;
+			width: 760px;
+			height: 250px;
+			line-height: 30px;
+			font-size: 12px;
+			margin-top: 50px;
+			position: absolute;
+			left: 400px;
+			top: 60px;
+		}
+		#copyright>span {
+			font-weight: bold;
+			font-size: 20px;
+		}
+		#about {
+			display: inline-block;
+			float: left;
+			width: 100px;
+			height: 150px;
+			position: absolute;
+			top: 250px;
+			left: 20px;
+		}
+		#about>ul>li {
+			list-style: none;
+		}
+		#about>ul>li>a {
+			text-decoration: none;
+			font-size: 13px;
+			color: black;
+		}
+		#about>ul>li>a:hover {
+			text-decoration: underline;
+			color: white;
+		}
+		#sign-in {
+			display: inline-block;
+			float: left;
+			width: 545px;;
+			height: 64px;
+			line-height: 64px;
+			margin-left: 168px;	
+			padding-left: 0px;
+		}
+		#sign-in>form:focus {
+			
+		}
+		.bk:focus {
+			outline: 2px rgb(0, 164, 255) solid;
+			
+		}
+		#submit1 {
+			display: inline-block;
+			width:42px;
+			height:30px;
+			background: #05a081;
+			border: none;
+			border-radius: 4px;
+			color: white;
+		}
+		#join {
+			display: inline-block;
+			width: 42px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background-color: #985358;
+			border-radius: 4px;
+		}
+		#join>a {
+			text-decoration: none;
+			color: white;
+			font-size: 14px;
+		}
+		#forget {
+			display: inline-block;
+			float: left;
+			text-decoration: none;
+			color: black;
+			font-size: 12px;
+			height: 64px;
+			line-height: 64px;
+		}
+		#forget:hover {
+			text-decoration: underline;
+			color: rgba(249,234,219,1);
+		}
+		#center3 {
+			width: 100%px;
+			height: 427px;
+			margin: 0 auto;
+			background-color: #D8C9B2;
+		}
+		#skill1 {
+			display: inline-block;
+			width: 500px;
+			height: 310px;
+			margin-top: 60px;
+			margin-left: 100px;
+		}
+		#knowledge1 {
+			display: inline-block;
+			width: 350px;
+			height: 45px;
+			line-height: 45px;
+			border-left: 3px green solid;
+			font-size: 23px;
+			margin-bottom: 10px;
+		}
+		#skill1>ul>li>a {
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+		}
+		#skill1>ul>li>a:hover {
+			color: white;
+			text-decoration: underline;
+		}
+		#skill1>ul>li {
+			margin-left: 20px;
+			line-height: 32px;
+			
+		}
+		#skill2 {
+			display: inline-block;
+			width: 500px;
+			height: 310px;
+			margin-top: 60px;
+			margin-left: 300px;
+		}
+		#knowledge2 {
+			display: inline-block;
+			width: 350px;
+			height: 45px;
+			line-height: 45px;
+			border-left: 3px green solid;
+			font-size: 23px;
+			margin-bottom: 10px;
+		}
+		#skill2>ul>li>a {
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+		}
+		#skill2>ul>li>a:hover {
+			color: white;
+			text-decoration: underline;
+		}
+		#skill2>ul>li {
+			margin-left: 20px;
+			line-height: 32px;
+			
+		}
+
+	</style>
+</head>
+<body>
+	</head>
+<body>
+	<div id="head">
+		<div id="logo"></div>
+		<div id="nav">
+			<ul>
+				<li id="n1"><a href="#">首页</a></li>
+				<li id="n2"><a href="#">他山之石</a></li>
+				<li id="n3"><a href="#">图样社区</a></li>
+				<li id="n4"><a href="#">版权保护</a></li>
+			</ul>
+			<div id="sign-in">
+				<form action="" method="post">
+					账号：<input class="bk" type="text" placeholder="手机号/邮箱" name="username">
+					密码：<input class="bk" type="password" name="password">
+					<input type="submit" value="登录" id="submit1" />
+					<div id="join"><a href="#">注册</a></div>
+				</form>
+			</div>
+			
+			<a id="forget" href="#">忘记密码</a>
+
+			
+		</div>
+	</div>
+	<div id="banner">
+		<form>
+				<input type="text" placeholder="每一张照片，都是时光的标本。" id="search" />
+				<input type="button" id="submit2" />
+		</form>
+		<div id="nav2">
+			<p>推荐：</p><a href="#">人像，</a><a href="#">风光，</a><a href="#">纪实，</a><a href="#">艺术，</a><a href="#">更多</a>
+		</div>
+		<p id="p1">CHAUNCEY YANG'S</p>
+		<p id="p2">PHOTO WALL</p>
+		<div id="next1"><p><</p></div>
+		<div id="next2"><p id="teli2">></p></div>
+		
+	</div>
+	<div id="center1">
+		<div id="box">
+			<div id="teli3"><p>Photographer</p></div>
+			<div id="part1"><p>青 年 摄 影 师</p></div>
+			<div id="card1">
+				<img src="images/chauncey_yang.JPG">
+				<div id="ziliao">
+					<P id="name1">Chauncey Yang</P>
+					<p id="fans1">Fans: XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In Haikou</p>
+					<p id="title1">"潜力新人摄影师"</p>
+				</div>
+			</div>
+			<div id="wall1">
+				<ul>
+					<li id="liphoto1"><img src="images/yang's photo/photo1.JPG"><div id="tips1"><p id="word1">&nbsp;&nbsp;&nbsp;&nbsp;“夏天的风，漾起天边淡紫色的烟霞，一如你唇角缱绻的笑意，看一眼便教人心醉。”</p><p id="weibo">@若若若若若冰</p></div></li>
+					<li id="liphoto2"><img src="images/yang's photo/photo2.JPG"></li>
+					<li id="liphoto3"><img src="images/yang's photo/photo3.JPG"></li>
+					<li id="liphoto4"><img src="images/yang's photo/photo4.JPG"></li>
+					<li id="liphoto5"><img src="images/yang's photo/photo5.JPG"></li>
+					<li id="liphoto6"><img src="images/yang's photo/photo6.JPG"><div id="tips2"><p id="word2">&nbsp;&nbsp;&nbsp;&nbsp;“喜欢你，连日落也看作唇印。”</p></div></li>
+				</ul>
+			</div>
+			<div id="card2">
+				<img src="images/sukunsang.JPG">
+				<div id="ziliao">
+					<P id="name2">苏 昆 桑</P>
+					<p id="fans1">Fans: XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In Haikou</p>
+					<p id="title1">"潜力新人摄影师"</p>
+				</div>
+			</div>
+			<div id="wall2">
+				<ul>
+					<li id="liphoto7"></li>
+					<li id="liphoto8"><img src="images/sks's photo/photo1.JPG"><p id="tips4">“黑夜成了我的外衣，沉默成了我说话的语气”</p></li>
+					<li id="liphoto9"></li>
+					<li id="liphoto10"><img src="images/sks's photo/photo3.JPG"><p id="tips3">“不知从什么时候开始，我像只困兽，被囚禁在这座城市里”</p></li>
+					<li id="liphoto11"></li>
+					<li id="liphoto12"><img src="images/sks's photo/photo2.JPG"><p id="tips5">“每天都有无数高楼拔地而起，我却偏安一隅，独享静谧”</p></li>
+					<li id="liphoto13"><img src="images/sks's photo/photo4.JPG"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="center2">
+		<div id="teli4"><p>SELECT</p></div>
+		<div id="part2"><p>精 选 推 荐</p></div>
+		<div id="box2">	
+			<div class="photolist" id="pl1"><img src="images/others/IMG1.JPG"><div id="litips1"><p>&nbsp;&nbsp;&nbsp;“落叶带着生命的瑰丽，在树下睡去，等待来年的重生。”<br><br><span>@Chauncey_Yang&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl2"><img src="images/others/IMG2.JPG"><div id="litips2"><p>&nbsp;&nbsp;&nbsp;“身居一隅，心向光明。”<br><br><span>@Chauncey_Yang</span></p></div></div>
+			<div class="photolist" id="pl3"><img src="images/others/IMG3.JPG"><div id="litips3"><p>&nbsp;&nbsp;&nbsp;“厌倦了城市的喧嚣，那就寻一处海岸，听听风与海水的呢喃。”<br><br><span>@Chauncey_Yang&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl4"><img src="images/others/IMG4.JPG"><div id="litips4"><p>&nbsp;&nbsp;&nbsp;“那年的高考心愿墙，看到这有趣的心愿，奇奇怪怪，可可爱爱。”<br><br><span>@Chauncey_Yang&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl5"><img src="images/others/IMG5.JPG"></div>
+			<div class="photolist" id="pl6"><img src="images/others/IMG6.JPG"><div id="litips6"><p>&nbsp;&nbsp;&nbsp;“一面墙留下千重情意，他日故地重游的人是否初心依旧？”<br><span>@Chauncey_Yang&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl7"><img src="images/others/IMG7.JPG"><div id="litips7"><p>&nbsp;&nbsp;&nbsp;“如果说生命是转瞬即逝的烟火,那就绚烂绽放一次吧。”<br><br><span>@Chauncey_Yang&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl8"><img src="images/others/IMG8.JPG"></div>
+			<div class="photolist" id="pl9"><img src="images/others/IMG9.JPG"><div id="litips9"><p>&nbsp;同</p></div></div>
+			<div class="photolist" id="pl10"><img src="images/others/IMG10.JPG"><div id="litips10"><p>&nbsp;&nbsp;&nbsp;“蹦迪狂欢的舞会背后是我们十八年寒窗苦读的坚守。<br>&nbsp;&nbsp;&nbsp;聚是一团火，散是满天星。<br>&nbsp;&nbsp;&nbsp;侨中学子，来日可期。”<br><br><span>@Chauncey_Yang</span></p></div></div>
+			<div class="photolist" id="pl11"><img src="images/others/IMG11.JPG"><div id="litips11"><p>&nbsp;小</p></div></div>
+			<div class="photolist" id="pl12"><img src="images/others/IMG12.JPG"><div id="litips12"><p>&nbsp;学</p></div></div>
+			<div class="photolist" id="pl13"><img src="images/others/IMG13.JPG"><div id="litips13"><p>&nbsp;林</p></div></div>
+			<div class="photolist" id="pl14"><img src="images/others/IMG14.JPG"><div id="litips14"><p>&nbsp;北</p></div></div>
+			<div class="photolist" id="pl15"><img src="images/others/IMG15.JPG"><div id="litips15"><p>&nbsp;京</p></div></div>
+			<div class="photolist" id="pl16"><img src="images/others/IMG16.JPG"><div id="litips16"><p>&nbsp;的</p></div></div>
+			<div class="photolist" id="pl17"><img src="images/others/IMG17.JPG"><div id="litips17"><p>&nbsp;记</p></div></div>
+			<div class="photolist" id="pl18"><img src="images/others/IMG18.JPG"><div id="litips18"><p>&nbsp;&nbsp;&nbsp;“生活中的小惊喜在于对自己熟悉的事物偶然有了新的认识，在图书馆里不经意的抬头，竟发现了不一样的美。”<br><br><span>@Chauncey_Yang&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl19"><img src="images/others/IMG19.JPG"><div id="litips19"><p>&nbsp;游</p></div></div>
+			<div class="photolist" id="pl20"><img src="images/others/IMG20.JPG"><div id="litips20"><p>&nbsp;&nbsp;“一张废掉的照片拍下了最好的自己。”<br><br><span>@是灰先生呀&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl21"><img src="images/others/IMG21.JPG"><div id="litips21"><p>&nbsp;&nbsp;“生活像一道彩虹，你不知道另一端通向哪里，但你会知道，它总是在那里。”<br><br><span>@sun啊哈哈_82839&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl22"><img src="images/others/IMG22.JPG"><div id="litips22"><p>&nbsp;&nbsp;“南瓜马车的午夜，你是否是那朵孤傲的蔷薇”<br><br><span>@sun啊哈哈_82839&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl23"><img src="images/others/IMG23.JPG"><div id="litips23"><p>&nbsp;&nbsp;“感觉有被旁边的家伙冒犯到@iPhone SE”</p></div></div>
+			<div class="photolist" id="pl24"><img src="images/others/IMG24.JPG"></div>
+			<div class="photolist" id="pl25"><img src="images/others/IMG25.JPG"><div id="litips25"><p>&nbsp;&nbsp;“今日风和日丽，小明得意洋洋地向小伙伴们讲述城市的灯红酒绿。”<br><br><span>@sun啊哈哈_82839&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl26"><img src="images/others/IMG26.JPG"></div>
+			<div class="photolist" id="pl27"><img src="images/others/IMG27.JPG"><div id="litips27"><p>“面孔是灵魂的镜子，<br>&nbsp;&nbsp;而艺术是生活的镜子。”<br><br><span>@sun啊哈哈_82839&nbsp;</span></p></div></div>
+			<div class="photolist" id="pl28"><img src="images/others/IMG28.JPG"></div>
+			<div id="ending"><p>美好事物存在于每一个看似平凡的当下，精彩待续……</p></div>  
+		</div>
+	</div>
+	<div id="center3">
+		<div id="skill1">
+			<p id="knowledge1">&nbsp;摄影前期知识</p>
+			<ul>
+				<li><a href="https://www.bilibili.com/video/BV1rZ4y1H7rf?t=19">站在桥上看风景，超广角拍人像是什么体验&nbsp;&nbsp;2020.6.14</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1Zi4y147iE?t=1">摄影师独家引导秘籍，不会摆动作的素人也能有好效果&nbsp;&nbsp;2020.5.26</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1nK41157no?t=114">焦段是什么？&nbsp;&nbsp;2020.4.30</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1vt4y127ow?t=283">手把手教你使用手机长焦摄像头&nbsp;&nbsp;2020.4.22</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1AK4y1k7oW?t=1">来自街拍大师的扫街技巧，让你提升出片效率&nbsp;&nbsp;2020.4.16</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1X7411572f?t=3">用珍珠奶茶理解光圈快门IOS，5分钟学会摄影曝光基础&nbsp;&nbsp;2020.2.11</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1M7411r72J?t=800">你真的会运用相机的动态范围和宽容度吗&nbsp;&nbsp;2020.1.28</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1CW411C7ZU?t=229">最简单却又特别有用的人像拍摄技巧&nbsp;&nbsp;2018.9.12</a></li>
+			</ul>
+		</div>
+		<div id="skill2">
+			<p id="knowledge2">&nbsp;摄影后期知识</p>
+			<ul>
+				<li><a href="https://www.bilibili.com/video/BV1Ep4y1D7Mh?t=108">后期零基础到曲线高手！谁都能听懂的曲线教程！&nbsp;&nbsp;2020.6.11</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1Gf4y1279K?t=232">如何破解与模仿后期风格：理解基本影调&nbsp;&nbsp;2020.5.24</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1ZC4y1W7mQ?t=1">三分钟调出日系通透人像，分享Lightroom调色思路&nbsp;&nbsp;2020.5.6</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1a54y1976J?from=search&seid=11731672355203396640">什么样的转场会让你的视频更高级&nbsp;&nbsp;2020.4.19</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1p7411d7St?t=1">清新人像调色教程，前期调色以及后期精修&nbsp;&nbsp;2020.3.18</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1v741137dZ?t=133">秒懂！黑金风色调原来这么简单！&nbsp;&nbsp;2020.2.13</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1N7411k7pD?t=3">通透皮肤Photoshop磨皮方法&nbsp;&nbsp;2020.1.27</a></li>
+				<li><a href="https://www.bilibili.com/video/BV1CW411C7ZU?t=229">最简单却又特别有用的人像拍摄技巧&nbsp;&nbsp;2018.9.12</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="bottom">
+		<div id="box3">
+			<p id="slogan"><span>ONE SHOOT</span><br><br>&nbsp;&nbsp;让摄影有温度，用图片讲故事<br>&nbsp;&nbsp;鼓励原创，不做高下评判<br>&nbsp;&nbsp;加入我们，共同分享自己眼中的世界</p>
+			<p id="copyright">
+				<span>版权声明</span><br>
+				&nbsp;&nbsp;本网站（网站地址）刊载的所有内容，包括文字、图片、音频、视频、软件、程序、以及网页版式设计等均由网站作者Chauncey Yang与各位内容作者联合投稿，本网站版权归属网站作者Chauncey Yang所有。<br>
+				&nbsp;&nbsp;访问者可将本网站提供的内容或服务用于个人学习、研究或欣赏，以及其他非商业性或非盈利性用途，但同时应遵守著作权法及其他相关法律的规定，不得侵犯本网站及相关权利人的合法权利。除此以外，将本网站任何内容或服务用于其他用途时，须征得本网站及相关权利人的书面许可，并支付报酬。<br>
+				&nbsp;&nbsp;本网站内容原作者如不愿意在本网站刊登内容，请及时通知本站，予以删除。<br>
+				&nbsp;&nbsp;©2020 Chauncey Yang. All rights reserved. | 电话：18332170187 | 邮箱：759657833@qq.com
+			</p>
+			<div id="about">
+				<ul>
+					<li><a href="#">关于</a></li>
+					<li><a href="#">帮助</a></li>
+					<li><a href="#">服务</a></li>
+					<li><a href="#">用户协议</a></li>
+					<li><a href="#">管理团队</a></li>
+					<li><a href="#">加入我们</a></li>
+				</ul>
+		</div>
+	</div>
+</body>
+</html>
